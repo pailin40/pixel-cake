@@ -19,7 +19,7 @@ Built with **React**, **Vite**, and **HTML5 Canvas**.
 
 ## 📸 Live Demo
 
-[🔗 View the live site](https://your-site-name.netlify.app)
+[🔗 View the live site](https://pixel-cake.netlify.app)
 
 ---
 
