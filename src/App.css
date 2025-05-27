@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+  animation: scanlineMove 10s linear infinite;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.giphy.com/media/l0Exk8EUzSLsrErEQ/giphy.gif");
+  background-size: cover;
+  opacity: 0.08;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.app {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff00cc, 0 0 60px #333399;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1s ease;
+  max-width: 500px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: #ff00cc;
+  text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ff00cc, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+input {
+  padding: 12px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+  background-color: #1a1a2e;
+  color: #f0f0f0;
+  border: 1px solid #ff00cc;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff00cc44;
+  margin: 1rem;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input:focus {
+  border-color: #ff00cc;
+  box-shadow: 0 0 12px #ff00cc99;
+  transform: translateY(-2px);
+}
+
+.avatar-canvas {
+  margin-top: 1rem;
+  border-radius: 12px;
+  background-color: #1a1a2e;
+  border: 2px solid #ff00cc66;
+  box-shadow: 0 0 15px #ff00cc44, inset 0 0 15px rgba(255, 0, 204, 0.1);
+  transition: all 0.4s ease;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.avatar-canvas:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 0 25px #ff00cc77, inset 0 0 25px rgba(255, 0, 204, 0.2);
+  border-color: #ff00cc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes scanlineMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc, 0 0 15px #ff00cc;
+  }
+  to {
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #ff00cc;
+  }
+}
+
+/* Cake-specific enhancements */
+.cake-info {
+  background: rgba(255, 0, 204, 0.1);
+  border: 1px solid rgba(255, 0, 204, 0.3);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ff00cc;
+}
+
+/* Add this to your App.css */
+button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #ff00cc99;
+}
+
+button:active {
+  transform: translateY(0);
+}
