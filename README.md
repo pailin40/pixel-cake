@@ -1,12 +1,41 @@
-# React + Vite
+# 🎂 Pixel Cake Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create a unique pixel-style birthday cake by simply typing your name — each cake is procedurally generated with vibrant colors, frosting, decorations, and animated candles!
 
-Currently, two official plugins are available:
+Built with **React**, **Vite**, and **HTML5 Canvas**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🧁 Unique cake per name input
+- 🔥 Glowing animated candle flames
+- 🎨 Pixel-art aesthetic with dynamic layers
+- 🧼 Option to remove candles
+- 💾 Downloadable image
+- 🌐 Deployed on Netlify
+
+---
+
+## 📸 Live Demo
+
+[🔗 View the live site](https://your-site-name.netlify.app)
+
+---
+
+## 🛠 Tech Stack
+
+- React + Vite
+- HTML5 Canvas API
+- CSS (neon/glow aesthetic)
+- Deployed via Netlify
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/pixel-cake.git
+cd pixel-cake
+npm install
+npm run dev
